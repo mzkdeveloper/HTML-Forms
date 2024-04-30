@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation with js and html</title>
+    <link rel="stylesheet" href="task.css">
+</head>
+
+<body>
+    <form>
+        <h1>Form validation</h1>
+        <label for="fname">first name</label><br>
+        <input type="text" id="fname" name="fname" required><br><br>
+        <label for="lname">last name name</label><br>
+        <input type="text" id="lname" name="lname" required><br><br>
+        <label for="email">email</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="num">number</label><br>
+        <input type="text" id="num" name="num" required><br><br>
+        <input type="button" value="submit" id="button" onclick="validate()">
+    </form>
+    <script>
+        function validate() {
+            var fname = document.getElementById("fname").value;
+            if (fname == "") {
+                alert("please provide your first name")
+            }
+            var lname = document.getElementById("lname").value;
+            if (lname == "") {
+                alert("please provide your last name")
+            }
+            var e = document.getElementById("email").value;
+            if (e == "") {
+                alert("please provide your email")
+            }
+            var n = document.getElementById("num").value;
+            if (n == "") {
+                alert("please provide your number")
+            }
+        }
+    </script>
+</body>
+
+</html>
